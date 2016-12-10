@@ -75,7 +75,11 @@ steal(function () {
             		dateDiv = "no data";
         	} else {
             	// else display the image:
-            		dateDiv = data;
+
+			var date = new Date(data);
+			var formattedDate = moment(date).format('M D, yyyy');
+	    		
+			dateDiv = formattedDate;
         	}
 
 	        // insert the image to display
