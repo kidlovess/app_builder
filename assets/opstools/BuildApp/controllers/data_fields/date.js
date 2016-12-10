@@ -32,6 +32,17 @@ steal(function () {
 				labelWidth: 0
 			},
 			{
+				view: "label",
+				label: "Date format options"
+			},
+			{
+				view: "text",
+				label: "Date Display",
+				labelWidth: "100",
+				id: "date-display",
+				placeholder: "date-display"
+			},
+			{
 		
 				view: "richselect",
 				id: componentIds.includeDay,
