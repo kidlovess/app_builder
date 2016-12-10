@@ -78,8 +78,8 @@ steal(function () {
             		dateDiv = data;
         	}
 
-        // insert the image to display
-        $container.html(imgDiv);
+	        // insert the image to display
+        	$container.html(dateDiv);
 		
 		
 		return true;
