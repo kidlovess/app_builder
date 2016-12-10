@@ -2,6 +2,9 @@ steal(function () {
 	var componentIds = {
 		editView: 'ab-new-date',
 		includeTime: 'ab-new-date-include-time',
+		includeDay : 'ab-new-date-include-day',
+		includeMonth : 'ab-new-date-include-month',
+		includeYear : 'ab-new-date-include-year'
 	};
 
 	// General settings
@@ -27,6 +30,51 @@ steal(function () {
 				id: componentIds.includeTime,
 				labelRight: "Include time",
 				labelWidth: 0
+			},
+			{
+		
+				view: "richselect",
+				id: componentIds.includeDay,
+				label: "Day",
+				value: 'none',
+				disabled: true,
+				options: [
+					{ id: 'includeDay-d', value: "1" },
+					{ id: 'includeDay-dd', value: "01" },
+					{ id: 'includeDay-ddd', value: "Fri" },
+					{ id: 'includeDay-dddd', value: "Monday" }
+					]
+	
+			},
+			{
+		
+				view: "richselect",
+				id: componentIds.includeMonth,
+				label: "Month",
+				value: 'none',
+				disabled: true,
+				options: [
+					{ id: 'includeDay-M', value: "1" },
+					{ id: 'includeDay-MM', value: "01" },
+					{ id: 'includeDay-MMM', value: "Jun" },
+					{ id: 'includeDay-MMMM', value: "June" }
+					]
+	
+			},
+			{
+		
+				view: "richselect",
+				id: componentIds.includeYear,
+				label: "Year",
+				value: 'none',
+				disabled: true,
+				options: [
+					{ id: 'includeDay-Y', value: "1" },
+					{ id: 'includeDay-YY', value: "01" },
+					{ id: 'includeDay-YYY', value: "001" },
+					{ id: 'includeDay-YYYY', value: "0001" }
+					]
+	
 			},
 		]
 	};
