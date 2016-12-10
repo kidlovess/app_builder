@@ -37,7 +37,6 @@ steal(function () {
 				id: componentIds.includeDay,
 				label: "Day",
 				value: 'none',
-				disabled: true,
 				options: [
 					{ id: 'includeDay-d', value: "1" },
 					{ id: 'includeDay-dd', value: "01" },
@@ -52,7 +51,6 @@ steal(function () {
 				id: componentIds.includeMonth,
 				label: "Month",
 				value: 'none',
-				disabled: true,
 				options: [
 					{ id: 'includeDay-M', value: "1" },
 					{ id: 'includeDay-MM', value: "01" },
@@ -67,7 +65,6 @@ steal(function () {
 				id: componentIds.includeYear,
 				label: "Year",
 				value: 'none',
-				disabled: true,
 				options: [
 					{ id: 'includeDay-Y', value: "1" },
 					{ id: 'includeDay-YY', value: "01" },
