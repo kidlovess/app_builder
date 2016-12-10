@@ -42,13 +42,13 @@ steal(function () {
 	// For save field
 	dateDataField.getSettings = function () {
 		var type = 'date',
-			editor = 'date',
-			format = 'dateFormatStr';
+			editor = 'date'
+			//format = 'dateFormatStr';
 
 		if ($$(componentIds.includeTime).getValue()) {
 			type = 'datetime';
 			editor = 'datetime';
-			format = 'fullDateFormatStr';
+			//format = 'fullDateFormatStr';
 		}
 
 		return {
@@ -58,9 +58,31 @@ steal(function () {
 				icon: dateDataField.icon,
 				editor: editor, // http://docs.webix.com/desktop__editing.html
 				filter_type: 'date', // DataTableFilterPopup - filter type
-				format: format
+				template:'<div class="ab-date-data-field"></div>', 
+				//format: format
 			}
 		};
+	};
+	
+	dateDataField.customDisplay = function (application, object, fieldData, rowId, data, itemNode, options) {
+		
+		var $container = $(itemNode).find('.ab-date-data-field');
+		$container.html('');
+
+        	var imgDiv = null; 
+
+		 if ( !data || data == '') {
+            		dateDiv = "no data";
+        	} else {
+            	// else display the image:
+            		dateDiv = data;
+        	}
+
+        // insert the image to display
+        $container.html(imgDiv);
+		
+		
+		return true;
 	};
 
 	dateDataField.resetState = function () {
