@@ -146,7 +146,7 @@ steal(function () {
             	// else display the image:
 
 			var date = new Date(data);
-			var formattedDate = moment(date).format('M D, yyyy');
+			var formattedDate = moment(date).format('M D, YYYY');
 	    		
 			dateDiv = formattedDate;
         	}
