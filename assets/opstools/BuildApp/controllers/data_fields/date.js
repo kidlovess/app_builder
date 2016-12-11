@@ -128,7 +128,7 @@ steal(function () {
 				editor: editor, // http://docs.webix.com/desktop__editing.html
 				filter_type: 'date', // DataTableFilterPopup - filter type
 				template:'<div class="ab-date-data-field"></div>', 
-				//format: format
+				dateformat: "M D, YYYY"
 			}
 		};
 	};
@@ -146,7 +146,7 @@ steal(function () {
             	// else display the image:
 
 			var date = new Date(data);
-			var formattedDate = moment(date).format('M D, YYYY');
+			var formattedDate = moment(date).format(fieldData.setting.dateformat);
 	    		
 			dateDiv = formattedDate;
         	}
