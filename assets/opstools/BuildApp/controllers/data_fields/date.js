@@ -46,7 +46,7 @@ steal(function () {
 	// For save field
 	dateDataField.getSettings = function () {
 		var type = 'date',
-			editor = 'date',
+			editor = 'date'
 			//format = 'dateFormatStr';
 
 		if ($$(componentIds.includeTime).getValue()) {
@@ -62,10 +62,11 @@ steal(function () {
 				icon: dateDataField.icon,
 				editor: editor, // http://docs.webix.com/desktop__editing.html
 				filter_type: 'date', // DataTableFilterPopup - filter type
-				format: format
+				template:'<div class="ab-date-data-field"></div>'
+				//dateformat: "M D, YYYY"
 			}
 		};
-	};	
+	};
 	
 	dateDataField.customDisplay = function (application, object, fieldData, rowId, data, itemNode, options) {
 		
@@ -80,9 +81,9 @@ steal(function () {
             	// else display the image:
 
 			var date = new Date(data);
-			//var formattedDate = moment(date).format("M D, YYYY");
+			var formattedDate = moment(date).format("M D, YYYY");
 	    		
-			dateDiv = date;
+			dateDiv = formattedDate;
         	}
 
 	        // insert the image to display
