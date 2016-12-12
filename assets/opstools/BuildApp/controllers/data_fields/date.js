@@ -65,7 +65,9 @@ steal(function () {
 				format: format
 			}
 		};
-	};	dateDataField.customDisplay = function (application, object, fieldData, rowId, data, itemNode, options) {
+	};	
+	
+	dateDataField.customDisplay = function (application, object, fieldData, rowId, data, itemNode, options) {
 		
 		var $container = $(itemNode).find('.ab-date-data-field');
 		$container.html('');
@@ -90,30 +92,6 @@ steal(function () {
 		return true;
 	};
 	
-		dateDataField.customDisplay = function (application, object, fieldData, rowId, data, itemNode, options) {
-		
-		var $container = $(itemNode).find('.ab-date-data-field');
-		$container.html('');
-
-        	var imgDiv = null; 
-
-		 if ( !data || data == '') {
-            		dateDiv = "no data";
-        	} else {
-            	// else display the image:
-
-			var date = new Date(data);
-			var formattedDate = moment(date).format("M D, YYYY");
-	    		
-			dateDiv = formattedDate;
-        	}
-
-	        // insert the image to display
-        	$container.html(dateDiv);
-		
-		
-		return true;
-	};
 
 	dateDataField.resetState = function () {
 		$$(componentIds.includeTime).setValue(false);
