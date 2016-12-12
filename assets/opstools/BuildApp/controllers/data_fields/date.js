@@ -5,7 +5,8 @@ steal(function () {
 		includeDay : 'ab-new-date-include-day',
 		includeMonth : 'ab-new-date-include-month',
 		includeYear : 'ab-new-date-include-year',
-		typeDate : 'ab-new-date-typeDate',
+		typeDatetime : 'ab-new-date-typeDatetime',
+		
 	};
 
 	// General settings
@@ -85,6 +86,18 @@ steal(function () {
 					]
 	
 			},
+			{
+				view: "radio",
+				id: componentIds.typeDatetime,
+				label: "typeDatetime",
+				value: 'none',
+				vertical: true,
+				options: [
+					{ id: 'comma', value: "Comma" },
+					{ id: 'period', value: "Period" },
+					{ id: 'space', value: "Space" }
+				]
+			}
 
 		]
 	};
