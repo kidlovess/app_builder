@@ -85,18 +85,7 @@ steal(function () {
 					]
 	
 			},
-			{
-				view: "radio",
-				id: componentIds.typeDate,
-				label: "TypeDate",
-				value: 'none',
-				vertical: true,
-				options: [
-					{ id: 'comma',  "Comma" },
-					{ id: 'period', "Period" },
-					{ id: 'space',  "Space" }
-				]
-			}
+
 		]
 	};
 
