@@ -130,7 +130,7 @@ steal(function () {
 				editor: editor, // http://docs.webix.com/desktop__editing.html
 				filter_type: 'date', // DataTableFilterPopup - filter type
 				template:'<div class="ab-date-data-field"></div>'
-				//dateformat: "M D, YYYY"
+				dateformat: "M D, YYYY"
 			}
 		};
 	};
