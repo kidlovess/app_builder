@@ -146,7 +146,7 @@ steal(function () {
 		
 		//if( typeof(data.setting.dateformat) === 'object')
 		//{
-		//	datadateFormat = data.setting.dateformat;
+			datadateFormat = data.setting.dateformat;
 		//}
 		
 
