@@ -138,6 +138,10 @@ steal(function () {
 	};
 	
 	dateDataField.customDisplay = function (application, object, fieldData, rowId, data, itemNode, options) {
+		if (data == null) {
+			$(itemNode).find('.ab-date-data-field').html('');
+			return true;
+		}
 		
 		var $container = $(itemNode).find('.ab-date-data-field');
 		$container.html('');
