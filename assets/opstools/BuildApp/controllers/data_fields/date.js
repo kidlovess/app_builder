@@ -144,10 +144,10 @@ steal(function () {
 		
 		var datadateFormat = "mm/dd/YYYY";
 		
-		if( typeof(data.setting.dateformat) === 'object')
-		{
-			datadateFormat = data.setting.dateformat;
-		}
+		//if( typeof(data.setting.dateformat) === 'object')
+		//{
+		//	datadateFormat = data.setting.dateformat;
+		//}
 		
 
         	var imgDiv = null; 
