@@ -139,6 +139,14 @@ steal(function () {
 		
 		var $container = $(itemNode).find('.ab-date-data-field');
 		$container.html('');
+		
+		var datadateFormat = "mm/dd/YYYY";
+		
+		if( data.setting.dateformat != '')
+		{
+			datadateFormat = data.setting.dateformat;
+		}
+		
 
         	var imgDiv = null; 
 
@@ -148,7 +156,7 @@ steal(function () {
             	// else display the image:
 
 			var date = new Date(data);
-			var formattedDate = moment(date).format(data.setting.dateformat);
+			var formattedDate = moment(date).format(datadateFormat);
 	    		
 			dateDiv = formattedDate;
         	}
