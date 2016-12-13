@@ -142,7 +142,7 @@ steal(function () {
 		
 		var datadateFormat = "mm/dd/YYYY";
 		
-		if( data.setting.dateformat != '')
+		if( data.setting.dateformat != null)
 		{
 			datadateFormat = data.setting.dateformat;
 		}
