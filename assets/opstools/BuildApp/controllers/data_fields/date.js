@@ -148,10 +148,10 @@ steal(function () {
 		
 		var datadateFormat = "mm/dd/YYYY";
 		
-		//if( typeof(data.setting.dateformat) === 'object')
-		//{
-			datadateFormat = data.setting.dateformat;
-		//}
+		if(fieldData.setting.dateformat  && fieldData.setting.dateformat != 'none')
+		{
+			datadateFormat = fieldData.setting.dateformat;
+		}
 		
 
         	var imgDiv = null; 
