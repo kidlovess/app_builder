@@ -104,7 +104,9 @@ steal(function () {
 
 	// Populate settings (when Edit field)
 	dateDataField.populateSettings = function (application, data) {
-		if (!data.type) return;
+		if (!data.type || !data.setting) return;
+		
+		
 
 		$$(componentIds.includeTime).setValue(data.type == 'datetime');
 		$$(componentIds.includeTime).disable();
@@ -142,7 +144,7 @@ steal(function () {
 		
 		var datadateFormat = "mm/dd/YYYY";
 		
-		if( typeof(data.setting.dateformat) != "undefined")
+		if( typeof(data.setting.dateformat) !==  "undefined")
 		{
 			datadateFormat = data.setting.dateformat;
 		}
