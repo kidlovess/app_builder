@@ -146,12 +146,12 @@ steal(function () {
 		var $container = $(itemNode).find('.ab-date-data-field');
 		$container.html('');
 		
-		var datadateFormat = "mm/dd/YYYY";
+		//var datadateFormat = "mm/dd/YYYY";
 		
-		if(fieldData.setting.dateformat  && fieldData.setting.dateformat != 'none')
-		{
-			datadateFormat = fieldData.setting.dateformat;
-		}
+		//if(fieldData.setting.dateformat  && fieldData.setting.dateformat != 'none')
+		//{
+		//	datadateFormat = fieldData.setting.dateformat;
+		//}
 		
 
         	var imgDiv = null; 
@@ -162,7 +162,7 @@ steal(function () {
             	// else display the image:
 
 			var date = new Date(data);
-			var formattedDate = moment(date).format(datadateFormat);
+			var formattedDate = moment(date).format("M D, YYYY");
 	    		
 			dateDiv = formattedDate;
         	}
