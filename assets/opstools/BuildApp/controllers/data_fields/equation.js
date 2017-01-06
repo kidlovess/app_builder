@@ -2,7 +2,7 @@ steal(function () {
 	var componentIds = {
 		editView: 'ab-new-equation',
 		name: 'ab-new-equation-name',
-		equaltionType: 'ab-new-equation-equaltionType',
+		equationType: 'ab-new-equation-equationType',
 		dateType: 'ab-new-equation-dateType',
 		resultType: 'ab-new-equation-resultType',
 		equation: 'ab-new-equation-equation',
@@ -104,8 +104,8 @@ steal(function () {
 			},
 			{
 				view: "radio",
-				id: componentIds.equaltionType,
-				label: "Equaltion Type",
+				id: componentIds.equationType,
+				label: "Equation Type",
 				labelWidth: "110",
 				value: 'none',
 				vertical: true,
@@ -271,7 +271,7 @@ steal(function () {
 			return;
 		}
 		
-		$$(componentIds.equaltionType).setValue(data.setting.equaltionType);
+		$$(componentIds.equationType).setValue(data.setting.equationType);
 		$$(componentIds.dateType).setValue(data.setting.dateType);
 		$$(componentIds.resultType).setValue(data.setting.resultType);
 		$$(componentIds.equation).setValue(data.setting.equation);
@@ -292,7 +292,7 @@ steal(function () {
 			fieldName: equationDataField.name,
 			type: type,
 			setting: {
-				equaltionType : $$(componentIds.equaltionType).getValue(),
+				equationType : $$(componentIds.equationType).getValue(),
 				dateType : $$(componentIds.dateType).getValue(),
 				resultType : $$(componentIds.resultType).getValue(),
 				equation : $$(componentIds.equation).getValue(),

@@ -2,7 +2,7 @@ steal(function () {
 	var componentIds = {
 		editView: 'ab-new-date',
 		includeTime: 'ab-new-date-include-time',
-		datedisPlay: 'ab-new-date-date-display',
+		dateDisplay: 'ab-new-date-date-display',
 		
 		includeDayFormat : 'ab-new-date-includedayFormat',
 		includeMonthFormat : 'ab-new-date-includemonthFormat',
@@ -88,7 +88,7 @@ steal(function () {
 		
 	}
 	
-	function showdateDisplay(){
+	function showDateDisplay(){
 		if(($$(componentIds.includeDayFormat).getValue().split("-")[1] && $$(componentIds.includeDayFormat).getValue().split("-")[1] != 'none')
 			&& ($$(componentIds.includeMonthFormat).getValue().split("-")[1] && $$(componentIds.includeMonthFormat).getValue().split("-")[1] != 'none')
 			&& ($$(componentIds.includeYearFormat).getValue().split("-")[1] && $$(componentIds.includeYearFormat).getValue().split("-")[1] != 'none')
@@ -114,9 +114,9 @@ steal(function () {
 			 	$$(componentIds.typeYearFormatDelimiters).getValue()
 			 	);
 
-			 $$(componentIds.datedisPlay).setValue("");;
+			 $$(componentIds.dateDisplay).setValue("");;
 			 var fullDatetime = moment(new Date()).format(formatDateOrder);
-			 var $container = $$(componentIds.datedisPlay).setValue(fullDatetime);
+			 var $container = $$(componentIds.dateDisplay).setValue(fullDatetime);
 
 			 
 			  //console.log("fulldate:" + fulldate);
@@ -151,7 +151,7 @@ steal(function () {
 			view: "text",
 			label: "Date Display",
 			labelWidth: "100",
-			id: componentIds.datedisPlay,
+			id: componentIds.dateDisplay,
 			disabled: true,
 				//value : showdateDisplay(),
 				placeholder: "date-display"
@@ -173,7 +173,7 @@ steal(function () {
 					],
 					on: {
 						'onChange': function (newValue, oldValue) {
-							showdateDisplay();
+							showDateDisplay();
 						}
 					}
 					
@@ -192,7 +192,7 @@ steal(function () {
 						],
 						on: {
 							'onChange': function (newValue, oldValue) {
-								showdateDisplay();
+								showDateDisplay();
 							}
 						}
 					}
@@ -213,7 +213,7 @@ steal(function () {
 					],
 					on: {
 						'onChange': function (newValue, oldValue) {
-							showdateDisplay();
+							showDateDisplay();
 						}
 					}
 				},
@@ -233,7 +233,7 @@ steal(function () {
 						],
 						on: {
 							'onChange': function (newValue, oldValue) {
-								showdateDisplay();
+								showDateDisplay();
 							}
 						}
 					},
@@ -250,7 +250,7 @@ steal(function () {
 						],
 						on: {
 							'onChange': function (newValue, oldValue) {
-								showdateDisplay();
+								showDateDisplay();
 							}
 						}
 					}
@@ -270,7 +270,7 @@ steal(function () {
 					],
 					on: {
 						'onChange': function (newValue, oldValue) {
-							showdateDisplay();
+							showDateDisplay();
 						}
 					}
 				},
@@ -288,7 +288,7 @@ steal(function () {
 						],
 						on: {
 							'onChange': function (newValue, oldValue) {
-								showdateDisplay();
+								showDateDisplay();
 							}
 						}
 					},
@@ -305,7 +305,7 @@ steal(function () {
 						],
 						on: {
 							'onChange': function (newValue, oldValue) {
-								showdateDisplay();
+								showDateDisplay();
 							}
 						}
 					}
@@ -326,7 +326,7 @@ steal(function () {
 					],
 					on: {
 						'onChange': function (newValue, oldValue) {
-							showdateDisplay();
+							showDateDisplay();
 						}
 					}
 				}
@@ -338,7 +338,7 @@ steal(function () {
 	dateDataField.populateSettings = function (application, data) {
 		
 		if (!data.type || !data.setting) return;
-		showdateDisplay();
+		showDateDisplay();
 		
 		$$(componentIds.includeDayFormat).setValue("includeDay-" + data.setting.includeDayFormat);
 		$$(componentIds.typeDayFormatDelimiters).setValue(data.setting.typeDayFormatDelimiters);
