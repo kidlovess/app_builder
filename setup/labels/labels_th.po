@@ -928,4 +928,3 @@ msgstr "[th] %s:Returns the year of a given date"
 #. key: ab.interface.delete.message
 msgid "Do you want to delete <b>{0}</b>?"
 msgstr "คุณต้องการลบ<b>{0}</b>หรือไม่"
-
