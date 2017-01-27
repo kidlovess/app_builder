@@ -1832,7 +1832,7 @@ module.exports = {
                         layout: false,
                         appName: appName,
                         objectName: modelName,
-                        modelFileName
+                        modelFileName,
                     }, function (err, output) {
                         if (err) next(err);
                         else {
