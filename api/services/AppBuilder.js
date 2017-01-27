@@ -1504,7 +1504,7 @@ module.exports = {
                             moduleName = appName.toLowerCase();
                             clientPath = path.join('node_modules', moduleName, 'assets', 'opstools', appName);
                             appPath = path.join('node_modules', moduleName);
-                            modelFileName = '${appName}_${modelName}';
+                            modelFileName = `${appName}_${modelName}`;
                             next();
                         }
                     });
@@ -1516,7 +1516,7 @@ module.exports = {
                 function(next) {
                     fs.stat(appPath, function(err, status) {
                         if (err) {
-                            sails.log('${appPath} not found');
+                            sails.log(`${appPath} not found`);
                             next(new Error("The application directory could not be accessed. Have you synchronized it yet?"));
                         }
                         else next();
@@ -1771,14 +1771,17 @@ module.exports = {
                         if (err) next(err);
                         else {
                             var lcModelName = modelName.toLowerCase();
-                            var patchData = "_config: {" +
-								"model: '${lcModelName}'," + // all lowercase model name
-        "actions: false,"+
-        "shortcuts: false"+
-        "rest: true"+
-    "}";
+                            var patchData = `
+    
+    _config: {
+        model: "${lcModelName}", // all lowercase model name
+        actions: false,
+        shortcuts: false,
+        rest: true
+    }
+`;
                             data = data.replace(/^module\.exports = \{$/m, '$&' + patchData);
-                            modelURL = '${moduleName}/${lcModelName}';
+                            modelURL = `${moduleName}/${lcModelName}`;
                             fs.writeFile(controllerFile, data, next);
                         }
                     });
@@ -1830,9 +1833,9 @@ module.exports = {
                 function(next) {
                     sails.renderView(path.join('app_builder', 'clientModel'), {
                         layout: false,
-                        appName: appName,
+                        appName,
                         objectName: modelName,
-                        modelFileName : modelFileName
+                        modelFileName
                     }, function (err, output) {
                         if (err) next(err);
                         else {
