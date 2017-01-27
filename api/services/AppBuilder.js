@@ -1830,7 +1830,7 @@ module.exports = {
                 function(next) {
                     sails.renderView(path.join('app_builder', 'clientModel'), {
                         layout: false,
-                        appName,
+                        appName: appName,
                         objectName: modelName,
                         modelFileName
                     }, function (err, output) {
