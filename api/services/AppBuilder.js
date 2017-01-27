@@ -1516,7 +1516,7 @@ module.exports = {
                 function(next) {
                     fs.stat(appPath, function(err, status) {
                         if (err) {
-                            sails.log(`${appPath} not found`);
+                            sails.log('${appPath} not found');
                             next(new Error("The application directory could not be accessed. Have you synchronized it yet?"));
                         }
                         else next();
