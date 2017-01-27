@@ -1771,7 +1771,7 @@ module.exports = {
                         if (err) next(err);
                         else {
                             var lcModelName = modelName.toLowerCase();
-                            var patchData = `
+                            var patchData = '
     
     _config: {
         model: "${lcModelName}", // all lowercase model name
@@ -1779,9 +1779,9 @@ module.exports = {
         shortcuts: false,
         rest: true
     }
-`;
+';
                             data = data.replace(/^module\.exports = \{$/m, '$&' + patchData);
-                            modelURL = `${moduleName}/${lcModelName}`;
+                            modelURL = '${moduleName}/${lcModelName}';
                             fs.writeFile(controllerFile, data, next);
                         }
                     });
